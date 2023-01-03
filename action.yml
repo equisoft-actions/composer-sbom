@@ -26,7 +26,7 @@ runs:
       id: context
       run: |
         working_directory=$(realpath ${{ inputs.working-directory }})
-        echo "::set-output name=bom-path::$working_directory/build/reports/bom.json"
+        echo "bom-path=$working_directory/build/reports/bom.json" >> $GITHUB_OUTPUT
 
     - name: Generate BOM
       shell: bash
