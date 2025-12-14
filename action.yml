@@ -35,7 +35,7 @@ runs:
         composer make-bom --no-interaction --output-format=JSON --output-file=${{ steps.context.outputs.bom-path }}
 
     - name: Archive BOM
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       if: "!cancelled()"
       with:
         name: bom.json
